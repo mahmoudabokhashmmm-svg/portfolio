@@ -6,6 +6,28 @@
     <title>محمود ناصر | Mahmoud Nasser</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        coffee: {
+                            950: '#14110f', // Deep Espresso Background
+                            900: '#1e1a17', // Dark Roast Card Surface
+                            850: '#27221e', // Card Hover
+                            800: '#3a322d', // Border Color
+                            700: '#5c4d43',
+                            500: '#9c7c64',
+                            400: '#c5a880', // Caramel Accent
+                            300: '#ddc7a9', // Latte Foam
+                            200: '#ebdccb', // Warm Cream Text
+                            100: '#f7f2eb', // Pure Foam White
+                        }
+                    }
+                }
+            }
+        }
+    </script>
     <!-- Google Fonts: IBM Plex Sans Arabic -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,30 +38,33 @@
     <style>
         body { 
             font-family: 'IBM Plex Sans Arabic', sans-serif; 
-            background-color: #09090b;
+            background-color: #14110f;
         }
-        /* تأثير النقاط الخلفية الناعم */
-        .bg-grid {
-            background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
-            background-size: 28px 28px;
+        .coffee-gradient {
+            background: linear-gradient(135deg, #ebdccb 0%, #c5a880 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .coffee-border-glow {
+            box-shadow: 0 0 25px -5px rgba(197, 168, 128, 0.15);
         }
     </style>
 </head>
-<body class="text-zinc-200 antialiased selection:bg-white selection:text-black">
+<body class="bg-coffee-950 text-coffee-200 antialiased selection:bg-coffee-400 selection:text-coffee-950">
 
-    <!-- Navigation -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-[#09090b]/80 backdrop-blur-md border-b border-zinc-800/80">
-        <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
-            <a href="#" class="text-lg font-bold text-white tracking-tight flex items-center gap-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+    <!-- Header / Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-coffee-950/85 backdrop-blur-md border-b border-coffee-800/60">
+        <div class="max-w-5xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="text-xl font-bold text-coffee-100 tracking-tight flex items-center gap-2.5">
+                <span class="w-2.5 h-2.5 rounded-full bg-coffee-400 animate-pulse"></span>
                 محمود ناصر
             </a>
             
-            <nav class="flex items-center gap-6 text-sm font-medium text-zinc-400">
-                <a href="#projects" class="hover:text-white transition">الأعمال</a>
-                <a href="#about" class="hover:text-white transition">عني</a>
-                <a href="#contact" class="hover:text-white transition">تواصل</a>
-                <a href="https://wa.me/201005823798" target="_blank" class="px-4 py-1.5 rounded-lg bg-zinc-100 hover:bg-white text-zinc-900 font-semibold text-xs transition">
+            <nav class="flex items-center gap-6 text-sm font-medium text-coffee-300">
+                <a href="#projects" class="hover:text-coffee-100 transition">المشاريع</a>
+                <a href="#about" class="hover:text-coffee-100 transition">عني</a>
+                <a href="#contact" class="hover:text-coffee-100 transition">تواصل</a>
+                <a href="https://wa.me/201005823798" target="_blank" class="px-4 py-2 rounded-xl bg-coffee-400 hover:bg-coffee-300 text-coffee-950 font-semibold text-xs transition shadow-md shadow-coffee-400/10">
                     واتساب
                 </a>
             </nav>
@@ -47,119 +72,125 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="min-h-screen pt-32 pb-20 flex items-center justify-center relative bg-grid">
-        <div class="max-w-3xl mx-auto px-6 text-center">
+    <section class="min-h-screen pt-36 pb-20 flex items-center justify-center relative overflow-hidden">
+        <!-- Warm Ambient Glow -->
+        <div class="absolute top-1/3 left-1/2 -translate-x-1/2 w-[450px] h-[450px] bg-coffee-400/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-3xl mx-auto px-6 text-center relative z-10">
             
             <!-- صورة البروفايل -->
-            <div class="relative inline-block mb-6">
-                <img src="profile.jpg" alt="Mahmoud Nasser" class="w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover border-2 border-zinc-700 p-0.5 shadow-xl">
-                <span class="absolute bottom-1 right-1 w-4 h-4 bg-emerald-500 border-2 border-[#09090b] rounded-full" title="متاح للعمل"></span>
+            <div class="relative inline-block mb-8">
+                <div class="p-1 rounded-full bg-gradient-to-b from-coffee-400/40 to-coffee-800 coffee-border-glow">
+                    <img src="profile.jpg" alt="Mahmoud Nasser" class="w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover border-2 border-coffee-950">
+                </div>
             </div>
 
             <!-- Status Pill -->
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900 border border-zinc-800 text-zinc-400 text-xs font-medium mb-6">
-                <span>Front-End Web Developer</span>
+            <div>
+                <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-coffee-900 border border-coffee-800 text-coffee-400 text-xs font-medium mb-6">
+                    <i class="fa-solid fa-code text-[11px]"></i> Front-End Web Developer
+                </span>
             </div>
 
-            <h1 class="text-3xl sm:text-5xl font-bold tracking-tight text-white mb-6 leading-tight">
-                أصمم وأطور مواقع ويب <br>
-                <span class="text-zinc-400">بسيطة، سريعة، وذات تجربة فريدة.</span>
+            <h1 class="text-3xl sm:text-5xl font-bold tracking-tight text-coffee-100 mb-6 leading-snug">
+                أصمم وأبني مواقع ويب <br>
+                <span class="coffee-gradient">بسيطة، سريعة، ومريحة للعين.</span>
             </h1>
 
-            <p class="text-zinc-400 text-base sm:text-lg mb-10 max-w-xl mx-auto leading-relaxed">
-                مطور واجهات أمامية أركز على الاهتمام بأدق التفاصيل، نظافة الكود، وسرعة الأداء لتحويل فكرتك لمنتج رقمي حقيقي.
+            <p class="text-coffee-300/80 text-base sm:text-lg mb-10 max-w-xl mx-auto leading-relaxed font-light">
+                أحول الأفكار والتصاميم إلى منتجات رقمية تفاعلية بأسلوب عصري يركز على سهولة الاستخدام ونظافة الكود.
             </p>
 
-            <div class="flex flex-wrap items-center justify-center gap-3">
-                <a href="#projects" class="px-6 py-2.5 bg-white text-zinc-900 font-semibold rounded-lg hover:bg-zinc-200 transition text-sm">
-                    تصفح المشاريع
+            <div class="flex flex-wrap items-center justify-center gap-4">
+                <a href="#projects" class="px-7 py-3 bg-coffee-400 hover:bg-coffee-300 text-coffee-950 font-bold rounded-xl transition text-sm shadow-lg shadow-coffee-400/15">
+                    تصفح أعمالي
                 </a>
-                <a href="mailto:mahmoudabokhashmm@gmail.com" class="px-6 py-2.5 bg-zinc-900 hover:bg-zinc-800 text-zinc-300 border border-zinc-800 rounded-lg transition text-sm">
-                    أرسل بريداً
+                <a href="#contact" class="px-7 py-3 bg-coffee-900 hover:bg-coffee-850 text-coffee-200 border border-coffee-800 rounded-xl transition text-sm">
+                    تواصل معي
                 </a>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-24 border-t border-zinc-800/80">
+    <section id="projects" class="py-24 border-t border-coffee-800/60">
         <div class="max-w-5xl mx-auto px-6">
             
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
                 <div>
-                    <h2 class="text-2xl sm:text-3xl font-bold text-white mb-2">المشاريع المختارة</h2>
-                    <p class="text-zinc-400 text-sm">أعمال قمت ببرمجتها وتصميمها مؤخراً</p>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-coffee-100 mb-2">معرض الأعمال</h2>
+                    <p class="text-coffee-400 text-sm">المواقع والمشاريع التي قمت بتطويرها مؤخراً</p>
                 </div>
-                <span class="text-xs text-zinc-500 mt-2 md:mt-0">4 مشاريع نشطة</span>
+                <span class="text-xs text-coffee-400/70 font-mono mt-2 md:mt-0">4 مشاريع مميزة</span>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-5">
+            <div class="grid md:grid-cols-2 gap-6">
                 
                 <!-- Project 1: Enigma Dental -->
-                <a href="https://mahmoudabokhashmmm-svg.github.io/enigma-dental/" target="_blank" class="group p-6 rounded-2xl bg-zinc-900/40 border border-zinc-800/80 hover:border-zinc-600 hover:bg-zinc-900/80 transition flex flex-col justify-between">
+                <a href="https://mahmoudabokhashmmm-svg.github.io/enigma-dental/" target="_blank" class="group p-7 rounded-2xl bg-coffee-900/60 border border-coffee-800/70 hover:border-coffee-400/50 hover:bg-coffee-850 transition duration-300 flex flex-col justify-between">
                     <div>
                         <div class="flex items-center justify-between mb-4">
-                            <span class="text-xs font-mono text-zinc-400 bg-zinc-800/80 px-2.5 py-1 rounded">Medical Platform</span>
-                            <i class="fa-solid fa-arrow-up-left text-zinc-500 group-hover:text-white group-hover:-translate-x-1 group-hover:-translate-y-1 transition duration-200"></i>
+                            <span class="text-xs font-medium text-coffee-400 bg-coffee-800/60 px-3 py-1 rounded-lg border border-coffee-700/50">Medical Platform</span>
+                            <i class="fa-solid fa-arrow-up-left text-coffee-500 group-hover:text-coffee-300 group-hover:-translate-x-1 group-hover:-translate-y-1 transition duration-200"></i>
                         </div>
-                        <h3 class="text-lg font-semibold text-white mb-2 group-hover:text-emerald-400 transition">Enigma Dental</h3>
-                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">
-                            موقع لعيادة ومركز طب أسنان بتصميم نظيف يركز على سهولة الحجز وعرض الخدمات الطبية.
+                        <h3 class="text-xl font-bold text-coffee-100 mb-2 group-hover:text-coffee-300 transition">Enigma Dental</h3>
+                        <p class="text-coffee-300/80 text-sm leading-relaxed mb-6 font-light">
+                            موقع لعيادة ومركز طب أسنان بتصميم نظيف يركز على سهولة استعراض الخدمات والتواصل المباشر.
                         </p>
                     </div>
-                    <div class="flex items-center gap-2 text-xs font-mono text-zinc-500">
+                    <div class="flex items-center gap-2 text-xs text-coffee-400/70">
                         <span>HTML5</span> • <span>CSS3</span> • <span>Responsive</span>
                     </div>
                 </a>
 
                 <!-- Project 2: Retro Games Arcade -->
-                <a href="https://service-2005-pc-retro-games-arcade.ai.studio/" target="_blank" class="group p-6 rounded-2xl bg-zinc-900/40 border border-zinc-800/80 hover:border-zinc-600 hover:bg-zinc-900/80 transition flex flex-col justify-between">
+                <a href="https://service-2005-pc-retro-games-arcade.ai.studio/" target="_blank" class="group p-7 rounded-2xl bg-coffee-900/60 border border-coffee-800/70 hover:border-coffee-400/50 hover:bg-coffee-850 transition duration-300 flex flex-col justify-between">
                     <div>
                         <div class="flex items-center justify-between mb-4">
-                            <span class="text-xs font-mono text-zinc-400 bg-zinc-800/80 px-2.5 py-1 rounded">Arcade & Games</span>
-                            <i class="fa-solid fa-arrow-up-left text-zinc-500 group-hover:text-white group-hover:-translate-x-1 group-hover:-translate-y-1 transition duration-200"></i>
+                            <span class="text-xs font-medium text-coffee-400 bg-coffee-800/60 px-3 py-1 rounded-lg border border-coffee-700/50">Arcade & Gaming</span>
+                            <i class="fa-solid fa-arrow-up-left text-coffee-500 group-hover:text-coffee-300 group-hover:-translate-x-1 group-hover:-translate-y-1 transition duration-200"></i>
                         </div>
-                        <h3 class="text-lg font-semibold text-white mb-2 group-hover:text-emerald-400 transition">Retro Games Arcade 2005</h3>
-                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">
-                            منصة لألعاب الكمبيوتر الكلاسيكية والأركيد بطابع نوستالجيا مميز وتجربة لعب تفاعلية.
+                        <h3 class="text-xl font-bold text-coffee-100 mb-2 group-hover:text-coffee-300 transition">Retro Games Arcade 2005</h3>
+                        <p class="text-coffee-300/80 text-sm leading-relaxed mb-6 font-light">
+                            منصة لألعاب الأركيد والكمبيوتر الكلاسيكية بتجربة تفاعلية ممتعة تعيد ذكريات الألعاب القديمة.
                         </p>
                     </div>
-                    <div class="flex items-center gap-2 text-xs font-mono text-zinc-500">
-                        <span>Interactive UI</span> • <span>Gaming</span> • <span>JavaScript</span>
+                    <div class="flex items-center gap-2 text-xs text-coffee-400/70">
+                        <span>JavaScript</span> • <span>Retro UI</span> • <span>Interactive</span>
                     </div>
                 </a>
 
                 <!-- Project 3: Nova -->
-                <a href="https://mahmoudabokhashmmm-svg.github.io/Nova/" target="_blank" class="group p-6 rounded-2xl bg-zinc-900/40 border border-zinc-800/80 hover:border-zinc-600 hover:bg-zinc-900/80 transition flex flex-col justify-between">
+                <a href="https://mahmoudabokhashmmm-svg.github.io/Nova/" target="_blank" class="group p-7 rounded-2xl bg-coffee-900/60 border border-coffee-800/70 hover:border-coffee-400/50 hover:bg-coffee-850 transition duration-300 flex flex-col justify-between">
                     <div>
                         <div class="flex items-center justify-between mb-4">
-                            <span class="text-xs font-mono text-zinc-400 bg-zinc-800/80 px-2.5 py-1 rounded">Landing Page</span>
-                            <i class="fa-solid fa-arrow-up-left text-zinc-500 group-hover:text-white group-hover:-translate-x-1 group-hover:-translate-y-1 transition duration-200"></i>
+                            <span class="text-xs font-medium text-coffee-400 bg-coffee-800/60 px-3 py-1 rounded-lg border border-coffee-700/50">Landing Page</span>
+                            <i class="fa-solid fa-arrow-up-left text-coffee-500 group-hover:text-coffee-300 group-hover:-translate-x-1 group-hover:-translate-y-1 transition duration-200"></i>
                         </div>
-                        <h3 class="text-lg font-semibold text-white mb-2 group-hover:text-emerald-400 transition">Nova</h3>
-                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">
-                            واجهة صفحة هبوط عصرية وسلسة تم بناؤها لتقديم تجربة تصفح سريعة ومرتبة.
+                        <h3 class="text-xl font-bold text-coffee-100 mb-2 group-hover:text-coffee-300 transition">Nova</h3>
+                        <p class="text-coffee-300/80 text-sm leading-relaxed mb-6 font-light">
+                            صفحة هبوط عصرية بأسلوب سلس وأنيق لعرض المنتجات أو الخدمات الرقمية بوضوح.
                         </p>
                     </div>
-                    <div class="flex items-center gap-2 text-xs font-mono text-zinc-500">
-                        <span>Modern UI</span> • <span>Web Design</span>
+                    <div class="flex items-center gap-2 text-xs text-coffee-400/70">
+                        <span>Web Design</span> • <span>Modern UX</span>
                     </div>
                 </a>
 
                 <!-- Project 4: AURA -->
-                <a href="https://mahmoudabokhashmmm-svg.github.io/AURA/" target="_blank" class="group p-6 rounded-2xl bg-zinc-900/40 border border-zinc-800/80 hover:border-zinc-600 hover:bg-zinc-900/80 transition flex flex-col justify-between">
+                <a href="https://mahmoudabokhashmmm-svg.github.io/AURA/" target="_blank" class="group p-7 rounded-2xl bg-coffee-900/60 border border-coffee-800/70 hover:border-coffee-400/50 hover:bg-coffee-850 transition duration-300 flex flex-col justify-between">
                     <div>
                         <div class="flex items-center justify-between mb-4">
-                            <span class="text-xs font-mono text-zinc-400 bg-zinc-800/80 px-2.5 py-1 rounded">Creative UI</span>
-                            <i class="fa-solid fa-arrow-up-left text-zinc-500 group-hover:text-white group-hover:-translate-x-1 group-hover:-translate-y-1 transition duration-200"></i>
+                            <span class="text-xs font-medium text-coffee-400 bg-coffee-800/60 px-3 py-1 rounded-lg border border-coffee-700/50">Creative Concept</span>
+                            <i class="fa-solid fa-arrow-up-left text-coffee-500 group-hover:text-coffee-300 group-hover:-translate-x-1 group-hover:-translate-y-1 transition duration-200"></i>
                         </div>
-                        <h3 class="text-lg font-semibold text-white mb-2 group-hover:text-emerald-400 transition">AURA</h3>
-                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">
-                            تجربة رقمية تعتمد على الجمالية والتبسيط وتناسب كافة أحجام الشاشات.
+                        <h3 class="text-xl font-bold text-coffee-100 mb-2 group-hover:text-coffee-300 transition">AURA</h3>
+                        <p class="text-coffee-300/80 text-sm leading-relaxed mb-6 font-light">
+                            واجهة تفاعلية مبنية بالتركيز على التناسق البصري والتجاوب الكامل مع الهواتف والشاشات.
                         </p>
                     </div>
-                    <div class="flex items-center gap-2 text-xs font-mono text-zinc-500">
-                        <span>Front-End</span> • <span>Minimalist</span>
+                    <div class="flex items-center gap-2 text-xs text-coffee-400/70">
+                        <span>Front-End</span> • <span>Clean Layout</span>
                     </div>
                 </a>
 
@@ -168,24 +199,24 @@
     </section>
 
     <!-- About & Skills -->
-    <section id="about" class="py-24 border-t border-zinc-800/80 bg-zinc-950">
+    <section id="about" class="py-24 border-t border-coffee-800/60 bg-coffee-900/20">
         <div class="max-w-5xl mx-auto px-6">
-            <div class="grid md:grid-cols-3 gap-12">
+            <div class="grid md:grid-cols-3 gap-10 items-start">
                 <div>
-                    <h2 class="text-xl font-bold text-white mb-3">عني والمهارات</h2>
-                    <p class="text-zinc-400 text-sm leading-relaxed">
-                        أركز على بناء وتطوير واجهات المستخدم البسيطة والعملية. أهتم جداً بالتفاصيل وسهولة استخدام الموقع من قبل الزائر.
+                    <h2 class="text-2xl font-bold text-coffee-100 mb-3">نبذة عني</h2>
+                    <p class="text-coffee-300/80 text-sm leading-relaxed font-light">
+                        أهتم ببناء واجهات الويب التي تجمع بين السرعة والراحة البصرية للزائر، مع التركيز على كتابة كود منظم يسهل تطويره.
                     </p>
                 </div>
 
                 <div class="md:col-span-2">
-                    <h3 class="text-xs font-mono uppercase text-zinc-500 tracking-wider mb-4">التقنيات والأدوات الأساسية</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3.5 py-1.5 rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-300 text-xs font-medium">HTML5</span>
-                        <span class="px-3.5 py-1.5 rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-300 text-xs font-medium">CSS3 / Tailwind</span>
-                        <span class="px-3.5 py-1.5 rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-300 text-xs font-medium">JavaScript</span>
-                        <span class="px-3.5 py-1.5 rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-300 text-xs font-medium">Responsive Design</span>
-                        <span class="px-3.5 py-1.5 rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-300 text-xs font-medium">Git / GitHub</span>
+                    <h3 class="text-xs uppercase text-coffee-400 tracking-wider font-semibold mb-4">التقنيات والأدوات</h3>
+                    <div class="flex flex-wrap gap-2.5">
+                        <span class="px-4 py-2 rounded-xl bg-coffee-900 border border-coffee-800 text-coffee-200 text-xs font-medium">HTML5</span>
+                        <span class="px-4 py-2 rounded-xl bg-coffee-900 border border-coffee-800 text-coffee-200 text-xs font-medium">CSS3 / Tailwind</span>
+                        <span class="px-4 py-2 rounded-xl bg-coffee-900 border border-coffee-800 text-coffee-200 text-xs font-medium">JavaScript</span>
+                        <span class="px-4 py-2 rounded-xl bg-coffee-900 border border-coffee-800 text-coffee-200 text-xs font-medium">Responsive Design</span>
+                        <span class="px-4 py-2 rounded-xl bg-coffee-900 border border-coffee-800 text-coffee-200 text-xs font-medium">Git & GitHub</span>
                     </div>
                 </div>
             </div>
@@ -193,36 +224,38 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-24 border-t border-zinc-800/80">
-        <div class="max-w-5xl mx-auto px-6">
-            <div class="p-8 sm:p-12 rounded-3xl bg-zinc-900/30 border border-zinc-800 text-center max-w-3xl mx-auto">
-                <h2 class="text-2xl sm:text-3xl font-bold text-white mb-3">هل لديك فكرة أو مشروع؟</h2>
-                <p class="text-zinc-400 text-sm mb-8">يمكنك التواصل معي مباشرة عبر أي من القنوات التالية:</p>
+    <section id="contact" class="py-24 border-t border-coffee-800/60">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div class="p-8 sm:p-14 rounded-3xl bg-coffee-900/50 border border-coffee-800/80 coffee-border-glow">
+                <h2 class="text-2xl sm:text-3xl font-bold text-coffee-100 mb-3">هل لديك فكرة أو مشروع جديد؟</h2>
+                <p class="text-coffee-300/80 text-sm mb-10 max-w-md mx-auto">تواصل معي مباشرة لتنفيذ موقعك بأعلى جودة واحترافية.</p>
 
-                <div class="flex flex-wrap items-center justify-center gap-3 mb-8">
-                    <a href="https://wa.me/201005823798" target="_blank" class="px-5 py-2.5 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-zinc-600 text-zinc-200 text-xs font-medium flex items-center gap-2 transition">
-                        <i class="fa-brands fa-whatsapp text-emerald-400"></i> واتساب: 01005823798
+                <!-- أزرار التواصل -->
+                <div class="flex flex-wrap items-center justify-center gap-3.5 mb-10">
+                    <a href="https://wa.me/201005823798" target="_blank" class="px-5 py-3 rounded-xl bg-coffee-900 border border-coffee-800 hover:border-coffee-400 text-coffee-200 text-xs font-medium flex items-center gap-2.5 transition">
+                        <i class="fa-brands fa-whatsapp text-emerald-400 text-sm"></i> واتساب: 01005823798
                     </a>
-                    <a href="mailto:mahmoudabokhashmm@gmail.com" class="px-5 py-2.5 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-zinc-600 text-zinc-200 text-xs font-medium flex items-center gap-2 transition">
-                        <i class="fa-solid fa-envelope text-zinc-400"></i> الإيميل
+                    <a href="mailto:mahmoudabokhashmm@gmail.com" class="px-5 py-3 rounded-xl bg-coffee-900 border border-coffee-800 hover:border-coffee-400 text-coffee-200 text-xs font-medium flex items-center gap-2.5 transition">
+                        <i class="fa-solid fa-envelope text-coffee-400 text-sm"></i> الإيميل
                     </a>
-                    <a href="tel:01005823798" class="px-5 py-2.5 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-zinc-600 text-zinc-200 text-xs font-medium flex items-center gap-2 transition">
-                        <i class="fa-solid fa-phone text-zinc-400"></i> اتصال هاتفياً
+                    <a href="tel:01005823798" class="px-5 py-3 rounded-xl bg-coffee-900 border border-coffee-800 hover:border-coffee-400 text-coffee-200 text-xs font-medium flex items-center gap-2.5 transition">
+                        <i class="fa-solid fa-phone text-coffee-400 text-sm"></i> اتصال هاتفي
                     </a>
                 </div>
 
-                <div class="flex items-center justify-center gap-4 text-zinc-400">
-                    <a href="https://github.com/mahmoudabokhashmmm-svg" target="_blank" class="hover:text-white transition" title="GitHub"><i class="fa-brands fa-github text-lg"></i></a>
-                    <a href="https://www.facebook.com/abukhashm" target="_blank" class="hover:text-white transition" title="Facebook"><i class="fa-brands fa-facebook-f text-lg"></i></a>
-                    <a href="https://www.instagram.com/_abo_khashm_?igsi=Z3BjNG1ld2J6MjRv" target="_blank" class="hover:text-white transition" title="Instagram"><i class="fa-brands fa-instagram text-lg"></i></a>
+                <!-- حسابات التواصل -->
+                <div class="flex items-center justify-center gap-4 text-coffee-400">
+                    <a href="https://github.com/mahmoudabokhashmmm-svg" target="_blank" class="w-10 h-10 rounded-full bg-coffee-950 border border-coffee-800 hover:border-coffee-400 hover:text-coffee-200 flex items-center justify-center transition" title="GitHub"><i class="fa-brands fa-github text-base"></i></a>
+                    <a href="https://www.facebook.com/abukhashm" target="_blank" class="w-10 h-10 rounded-full bg-coffee-950 border border-coffee-800 hover:border-coffee-400 hover:text-coffee-200 flex items-center justify-center transition" title="Facebook"><i class="fa-brands fa-facebook-f text-base"></i></a>
+                    <a href="https://www.instagram.com/_abo_khashm_?igsi=Z3BjNG1ld2J6MjRv" target="_blank" class="w-10 h-10 rounded-full bg-coffee-950 border border-coffee-800 hover:border-coffee-400 hover:text-coffee-200 flex items-center justify-center transition" title="Instagram"><i class="fa-brands fa-instagram text-base"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-8 border-t border-zinc-900 text-center text-zinc-600 text-xs">
-        <p>© 2026 محمود ناصر • جميع الحقوق محفوظة</p>
+    <footer class="py-8 border-t border-coffee-800/40 text-center text-coffee-500 text-xs">
+        <p>© 2026 محمود ناصر • صُنع بحب وإتقان</p>
     </footer>
 
 </body>

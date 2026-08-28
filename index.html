@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محمود ناصر | Mahmoud Nasser - Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body { font-family: 'Cairo', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gradient-border {
+            background: linear-gradient(135deg, #6366f1, #a855f7, #ec4899);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-purple-500 selection:text-white">
+
+    <!-- Header / Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="text-2xl font-black tracking-wider gradient-text">&lt;Mahmoud /&gt;</a>
+            <nav class="hidden md:flex items-center gap-8 text-slate-300 font-semibold">
+                <a href="#about" class="hover:text-purple-400 transition">نبذة عني</a>
+                <a href="#projects" class="hover:text-purple-400 transition">أعمالي</a>
+                <a href="#skills" class="hover:text-purple-400 transition">المهارات</a>
+                <a href="#contact" class="px-5 py-2.5 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white rounded-full transition shadow-lg shadow-purple-600/30">تواصل معي</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen pt-36 pb-20 flex items-center justify-center relative overflow-hidden">
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-purple-600/15 rounded-full blur-3xl pointer-events-none"></div>
+        
+        <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+            
+            <!-- صورة البروفايل -->
+            <div class="inline-block p-1 rounded-full gradient-border shadow-2xl shadow-purple-500/20 mb-6">
+                <img src="profile.jpg" alt="Mahmoud Nasser" class="w-36 h-36 sm:w-44 sm:h-44 rounded-full object-cover border-4 border-slate-950">
+            </div>
+
+            <br>
+            <span class="inline-block px-4 py-1.5 rounded-full bg-slate-900 border border-slate-700 text-purple-400 text-sm font-semibold mb-6">
+                🚀 متاح للمشاريع الجديدة والعمل الحر
+            </span>
+
+            <h1 class="text-4xl sm:text-6xl font-black leading-tight mb-6">
+                أهلاً، أنا <span class="gradient-text">محمود ناصر</span> <br>
+                <span class="text-2xl sm:text-4xl text-slate-200">Front-End & Web Developer</span>
+            </h1>
+
+            <p class="text-lg sm:text-xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+                أقوم بتحويل الأفكار والتصاميم إلى مواقع وتطبيقات ويب سريعة، تفاعلية، ومتوافقة تماماً مع كافة الشاشات.
+            </p>
+
+            <div class="flex flex-wrap items-center justify-center gap-4">
+                <a href="#projects" class="px-8 py-3.5 bg-purple-600 hover:bg-purple-500 text-white font-bold rounded-xl shadow-lg shadow-purple-600/30 transition">
+                    <i class="fa-solid fa-laptop-code ml-2"></i> استعرض مشاريعي
+                </a>
+                <a href="https://wa.me/201005823798" target="_blank" class="px-8 py-3.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-xl shadow-lg shadow-emerald-600/30 transition">
+                    <i class="fa-brands fa-whatsapp ml-2"></i> تواصل عبر واتساب
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 border-t border-slate-800/80 bg-slate-900/30">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-3">نبذة <span class="gradient-text">عني</span></h2>
+                <p class="text-slate-400">شغفي وبناء تجارب الويب</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-5 text-slate-300 leading-relaxed text-lg">
+                    <p>
+                        أنا <strong class="text-purple-400">محمود ناصر</strong>، مطور واجهات أمامية (Front-End Developer) أركز على كتابة كود نظيف وبناء مواقع حديثة توفر تجربة استخدام ممتعة وسريعة.
+                    </p>
+                    <p>
+                        قمت بتنفيذ العديد من المشاريع المتنوعة بدءاً من مواقع العيادات والشركات وصولاً إلى صفحات الهبوط التفاعلية ومشاريع الألعاب.
+                    </p>
+                </div>
+                <!-- إحصائيات سريعة -->
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl text-center hover:border-purple-500/40 transition">
+                        <div class="text-4xl font-black text-purple-400 mb-2">4+</div>
+                        <div class="text-slate-400 text-sm font-medium">مشاريع حية ومكتملة</div>
+                    </div>
+                    <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl text-center hover:border-indigo-500/40 transition">
+                        <div class="text-4xl font-black text-indigo-400 mb-2">100%</div>
+                        <div class="text-slate-400 text-sm font-medium">تصميم متجاوب وسريع</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section (معرض الأعمال) -->
+    <section id="projects" class="py-24 border-t border-slate-800/80">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-3">معرض <span class="gradient-text">الأعمال والمشاريع</span></h2>
+                <p class="text-slate-400">اضغط على أي مشروع لتجربته ومعاينته مباشرة</p>
+            </div>
+
+            <!-- شبكة المشاريع -->
+            <div class="grid md:grid-cols-2 gap-8">
+                
+                <!-- مشروع 1: Enigma Dental -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-purple-500/60 transition group flex flex-col justify-between">
+                    <div class="p-7">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex gap-2 flex-wrap">
+                                <span class="text-xs px-3 py-1 rounded-md bg-purple-950/60 text-purple-400 border border-purple-800">Medical / Clinic</span>
+                                <span class="text-xs px-3 py-1 rounded-md bg-slate-800 text-slate-300">Responsive UI</span>
+                            </div>
+                            <span class="text-slate-500 text-xs font-semibold">GitHub Pages</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 group-hover:text-purple-400 transition flex items-center gap-2">
+                            <i class="fa-solid fa-tooth text-purple-400"></i> Enigma Dental
+                        </h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            موقع متكامل لمركز وعيادة طب الأسنان، يعرض الخدمات الطبية، معلومات الأطباء، ومصمم بطريقة تسهل على المرضى التصفح والتواصل.
+                        </p>
+                    </div>
+                    <div class="px-7 pb-7">
+                        <a href="https://mahmoudabokhashmmm-svg.github.io/enigma-dental/" target="_blank" class="w-full inline-flex items-center justify-center py-3 px-4 rounded-xl bg-purple-600 hover:bg-purple-500 text-white text-sm font-bold shadow-lg shadow-purple-600/20 transition">
+                            <span>معاينة الموقع المباشر</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square mr-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- مشروع 2: Retro Games Arcade -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-pink-500/60 transition group flex flex-col justify-between">
+                    <div class="p-7">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex gap-2 flex-wrap">
+                                <span class="text-xs px-3 py-1 rounded-md bg-pink-950/60 text-pink-400 border border-pink-800">Gaming</span>
+                                <span class="text-xs px-3 py-1 rounded-md bg-slate-800 text-slate-300">Retro Style</span>
+                            </div>
+                            <span class="text-slate-500 text-xs font-semibold">AI Studio</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 group-hover:text-pink-400 transition flex items-center gap-2">
+                            <i class="fa-solid fa-gamepad text-pink-400"></i> Retro Games Arcade 2005
+                        </h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            موقع ومنصة لألعاب الكمبيوتر الكلاسيكية وألعاب الأركيد القديمة، بتصميم ريترو ونوستالجيا ممتعة تعيد ذكريات الألعاب.
+                        </p>
+                    </div>
+                    <div class="px-7 pb-7">
+                        <a href="https://service-2005-pc-retro-games-arcade.ai.studio/" target="_blank" class="w-full inline-flex items-center justify-center py-3 px-4 rounded-xl bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-500 hover:to-purple-500 text-white text-sm font-bold shadow-lg shadow-pink-600/20 transition">
+                            <span>معاينة الموقع المباشر</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square mr-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- مشروع 3: Nova -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-indigo-500/60 transition group flex flex-col justify-between">
+                    <div class="p-7">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex gap-2 flex-wrap">
+                                <span class="text-xs px-3 py-1 rounded-md bg-indigo-950/60 text-indigo-400 border border-indigo-800">Modern Web</span>
+                                <span class="text-xs px-3 py-1 rounded-md bg-slate-800 text-slate-300">Interactive UI</span>
+                            </div>
+                            <span class="text-slate-500 text-xs font-semibold">GitHub Pages</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 group-hover:text-indigo-400 transition flex items-center gap-2">
+                            <i class="fa-solid fa-wand-magic-sparkles text-indigo-400"></i> Nova
+                        </h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            مشروع موقع ويب حديث يتميز بتصميم أنيق وتفاعلي، مع بنية برمجية مرتبة ومحسنة لتجربة تصفح فريدة وسلسة.
+                        </p>
+                    </div>
+                    <div class="px-7 pb-7">
+                        <a href="https://mahmoudabokhashmmm-svg.github.io/Nova/" target="_blank" class="w-full inline-flex items-center justify-center py-3 px-4 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-bold shadow-lg shadow-indigo-600/20 transition">
+                            <span>معاينة الموقع المباشر</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square mr-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- مشروع 4: AURA -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-cyan-500/60 transition group flex flex-col justify-between">
+                    <div class="p-7">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex gap-2 flex-wrap">
+                                <span class="text-xs px-3 py-1 rounded-md bg-cyan-950/60 text-cyan-400 border border-cyan-800">Creative Design</span>
+                                <span class="text-xs px-3 py-1 rounded-md bg-slate-800 text-slate-300">Fast Performance</span>
+                            </div>
+                            <span class="text-slate-500 text-xs font-semibold">GitHub Pages</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 group-hover:text-cyan-400 transition flex items-center gap-2">
+                            <i class="fa-solid fa-bolt text-cyan-400"></i> AURA
+                        </h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            تصميم وتطوير واجهة عصرية تعتمد على البساطة والجمالية العالية، مع مراعاة التوافقية التامة مع شاشات الهواتف والحواسب.
+                        </p>
+                    </div>
+                    <div class="px-7 pb-7">
+                        <a href="https://mahmoudabokhashmmm-svg.github.io/AURA/" target="_blank" class="w-full inline-flex items-center justify-center py-3 px-4 rounded-xl bg-cyan-600 hover:bg-cyan-500 text-white text-sm font-bold shadow-lg shadow-cyan-600/20 transition">
+                            <span>معاينة الموقع المباشر</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square mr-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 border-t border-slate-800/80 bg-slate-900/30">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-3">المهارات <span class="gradient-text">والتقنيات</span></h2>
+            <p class="text-slate-400 mb-12">الأدوات التي أستخدمها في بناء وتطوير المشاريع</p>
+
+            <div class="flex flex-wrap justify-center gap-4">
+                <span class="px-5 py-3 bg-slate-900 border border-slate-800 rounded-xl text-slate-200 font-medium flex items-center gap-2 shadow-sm"><i class="fa-brands fa-html5 text-orange-500 text-xl"></i> HTML5</span>
+                <span class="px-5 py-3 bg-slate-900 border border-slate-800 rounded-xl text-slate-200 font-medium flex items-center gap-2 shadow-sm"><i class="fa-brands fa-css3-alt text-blue-500 text-xl"></i> CSS3</span>
+                <span class="px-5 py-3 bg-slate-900 border border-slate-800 rounded-xl text-slate-200 font-medium flex items-center gap-2 shadow-sm"><i class="fa-brands fa-js text-yellow-400 text-xl"></i> JavaScript</span>
+                <span class="px-5 py-3 bg-slate-900 border border-slate-800 rounded-xl text-slate-200 font-medium flex items-center gap-2 shadow-sm"><i class="fa-solid fa-mobile-screen-button text-purple-400 text-xl"></i> Responsive Design</span>
+                <span class="px-5 py-3 bg-slate-900 border border-slate-800 rounded-xl text-slate-200 font-medium flex items-center gap-2 shadow-sm"><i class="fa-brands fa-github text-white text-xl"></i> GitHub Pages</span>
+                <span class="px-5 py-3 bg-slate-900 border border-slate-800 rounded-xl text-slate-200 font-medium flex items-center gap-2 shadow-sm"><i class="fa-brands fa-git-alt text-red-500 text-xl"></i> Git Version Control</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 border-t border-slate-800/80">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4">جاهز نبدأ مشروعك القادم؟</h2>
+            <p class="text-slate-400 mb-10 text-lg">يسعدني دائماً التعاون وبناء أفكار جديدة، تواصل معي عبر:</p>
+            
+            <!-- أزرار التواصل السريع -->
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4 mb-8">
+                <!-- واتساب -->
+                <a href="https://wa.me/201005823798" target="_blank" class="p-4 bg-slate-900 border border-slate-800 hover:border-emerald-500 rounded-2xl flex items-center gap-4 transition group">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-2xl group-hover:scale-110 transition">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <div class="text-right">
+                        <div class="text-xs text-slate-400 font-medium">واتساب</div>
+                        <div class="font-bold text-slate-200 text-sm">01005823798</div>
+                    </div>
+                </a>
+
+                <!-- اتصال مباشر -->
+                <a href="tel:01005823798" class="p-4 bg-slate-900 border border-slate-800 hover:border-blue-500 rounded-2xl flex items-center gap-4 transition group">
+                    <div class="w-12 h-12 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center text-xl group-hover:scale-110 transition">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div class="text-right">
+                        <div class="text-xs text-slate-400 font-medium">اتصال هاتفي</div>
+                        <div class="font-bold text-slate-200 text-sm">01005823798</div>
+                    </div>
+                </a>
+
+                <!-- إيميل -->
+                <a href="mailto:mahmoudabokhashmm@gmail.com" class="p-4 bg-slate-900 border border-slate-800 hover:border-purple-500 rounded-2xl flex items-center gap-4 transition group sm:col-span-2 md:col-span-1">
+                    <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center text-xl group-hover:scale-110 transition">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div class="text-right truncate">
+                        <div class="text-xs text-slate-400 font-medium">البريد الإلكتروني</div>
+                        <div class="font-bold text-slate-200 text-xs truncate">mahmoudabokhashmm@gmail.com</div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- وسائل التواصل الاجتماعي -->
+            <div class="flex justify-center gap-4 pt-4">
+                <a href="https://github.com/mahmoudabokhashmmm-svg" target="_blank" class="w-12 h-12 rounded-full bg-slate-900 border border-slate-800 hover:border-white hover:text-white text-slate-300 flex items-center justify-center text-xl transition" title="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.facebook.com/abukhashm" target="_blank" class="w-12 h-12 rounded-full bg-slate-900 border border-slate-800 hover:border-blue-500 hover:text-blue-400 text-slate-300 flex items-center justify-center text-xl transition" title="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/_abo_khashm_?igsi=Z3BjNG1ld2J6MjRv" target="_blank" class="w-12 h-12 rounded-full bg-slate-900 border border-slate-800 hover:border-pink-500 hover:text-pink-400 text-slate-300 flex items-center justify-center text-xl transition" title="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-slate-800/80 text-center text-slate-500 text-sm">
+        <p>© 2026 جميع الحقوق محفوظة | صُنع بواسطة <span class="text-purple-400 font-semibold">محمود ناصر</span></p>
+    </footer>
+
+</body>
+                  </html>

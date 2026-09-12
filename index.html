@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahmoud Nasser | Front-End Developer</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        latte: {
+                            50: '#fbf8f4',   // خلفية كريمية فاتحة
+                            100: '#f4ede2',  // كارت فاتح
+                            200: '#e7dabf',  // حدود ناعمة
+                            300: '#d5bf9b',
+                            400: '#b89467',  // كراميل
+                            500: '#9b7447',  // كراميل غامق
+                            600: '#7e5a33',
+                            700: '#5c4125',
+                            800: '#432f1b',
+                            900: '#2b1e12',  // نصوص داكنة
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body { 
+            font-family: 'IBM Plex Sans Arabic', sans-serif; 
+            background-color: #fbf8f4;
+        }
+        .font-en {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-latte-50 text-latte-800 antialiased selection:bg-latte-400 selection:text-white">
+
+    <!-- Header / Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-latte-50/95 backdrop-blur-md border-b border-latte-200/70">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2 group shrink-0">
+                <span class="w-9 h-9 rounded-xl bg-latte-900 text-latte-50 flex items-center justify-center font-en font-extrabold text-xs tracking-tight group-hover:bg-latte-700 transition">
+                    MN
+                </span>
+                <span class="font-en text-sm sm:text-base font-extrabold text-latte-900 tracking-tight hidden sm:inline">
+                    Mahmoud Nasser
+                </span>
+            </a>
+            
+            <nav class="flex items-center gap-2 sm:gap-6 text-xs sm:text-sm font-semibold text-latte-700">
+                <a href="#projects" class="hover:text-latte-900 transition px-1">المشاريع</a>
+                <a href="#about" class="hover:text-latte-900 transition px-1">عني</a>
+                <a href="#contact" class="hover:text-latte-900 transition px-1">تواصل</a>
+                <a href="https://wa.me/201005823798" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-latte-900 hover:bg-latte-800 text-latte-50 font-medium text-xs transition shadow-xs whitespace-nowrap">
+                    واتساب
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen pt-28 pb-16 flex items-center justify-center relative">
+        <div class="max-w-3xl mx-auto px-6 text-center">
+            
+            <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-latte-100 border border-latte-200 text-latte-700 text-xs font-semibold mb-6">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                متاح لاستقبال مشاريع جديدة
+            </div>
+
+            <!-- الاسم والوصف -->
+            <h1 class="font-en text-4xl sm:text-6xl font-extrabold text-latte-900 tracking-tight mb-4">
+                Mahmoud Nasser
+            </h1>
+
+            <p class="text-2xl sm:text-3xl font-bold text-latte-700 mb-6 leading-tight">
+                أصمم وأطور مواقع ويب بسيطة، سريعة، ومريحة للعين.
+            </p>
+
+            <p class="text-latte-600 text-sm sm:text-base mb-10 max-w-xl mx-auto leading-relaxed">
+                أحول الأفكار والتصاميم إلى منتجات رقمية تفاعلية بأسلوب عصري يركز على سهولة الاستخدام ونظافة الكود.
+            </p>
+
+            <!-- Buttons -->
+            <div class="flex flex-wrap items-center justify-center gap-3">
+                <a href="#projects" class="px-7 py-3.5 bg-latte-900 hover:bg-latte-800 text-latte-50 font-bold rounded-xl transition text-sm shadow-md shadow-latte-900/10 hover:-translate-y-0.5">
+                    تصفح أعمالي
+                </a>
+                <a href="#contact" class="px-7 py-3.5 bg-latte-100 hover:bg-latte-200 text-latte-900 border border-latte-200 font-bold rounded-xl transition text-sm hover:-translate-y-0.5">
+                    تواصل معي
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 border-t border-latte-200/80 bg-white/50">
+        <div class="max-w-5xl mx-auto px-6">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
+                <div>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-latte-900 mb-1.5">معرض الأعمال</h2>
+                    <p class="text-latte-600 text-xs sm:text-sm">مجموعة من المواقع الحية التي قمت بإنشائها وتطويرها</p>
+                </div>
+                <span class="text-xs text-latte-500 font-mono mt-2 md:mt-0 bg-latte-100 px-3 py-1 rounded-full border border-latte-200 self-start md:self-auto">4 مشاريع حية</span>
+            </div>
+
+            <!-- شبكة المشاريع -->
+            <div class="grid md:grid-cols-2 gap-6">
+                
+                <!-- Project 1: Enigma Dental -->
+                <a href="https://mahmoudabokhashmmm-svg.github.io/enigma-dental/" target="_blank" rel="noopener noreferrer" class="group rounded-2xl bg-white border border-latte-200 hover:border-latte-400 hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between overflow-hidden">
+                    <div class="h-48 bg-latte-100 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80" alt="Enigma Dental Preview" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-xs text-[11px] font-mono text-latte-800 px-2.5 py-1 rounded-md border border-latte-200 shadow-xs">Live Demo</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs font-semibold text-latte-700 bg-latte-100 px-3 py-1 rounded-md border border-latte-200">Dental Clinic</span>
+                            <i class="fa-solid fa-arrow-up-left text-latte-400 group-hover:text-latte-900 group-hover:-translate-x-1 group-hover:-translate-y-1 transition duration-200"></i>
+                        </div>
+                        <h3 class="font-en text-xl font-bold text-latte-900 mb-2 group-hover:text-latte-600 transition">Enigma Dental</h3>
+                        <p class="text-latte-700 text-sm font-medium mb-5">
+                            موقع عيادة لطب وجراحة الأسنان بتصميم هادئ ومريح للمريض
+                        </p>
+                        <div class="flex items-center gap-2 text-[11px] font-mono text-latte-500 pt-4 border-t border-latte-100">
+                            <span>HTML5</span> • <span>CSS3</span> • <span>Responsive</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project 2: Elite Medical Complex -->
+                <a href="https://mahmoudabokhashmmm-svg.github.io/-Elite-Medical-Complex-/" target="_blank" rel="noopener noreferrer" class="group rounded-2xl bg-white border border-latte-200 hover:border-latte-400 hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between overflow-hidden">
+                    <div class="h-48 bg-latte-100 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80" alt="Elite Medical Complex Preview" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-xs text-[11px] font-mono text-latte-800 px-2.5 py-1 rounded-md border border-latte-200 shadow-xs">Live Demo</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs font-semibold text-latte-700 bg-latte-100 px-3 py-1 rounded-md border border-latte-200">Medical Complex</span>
+                            <i class="fa-solid fa-arrow-up-left text-latte-400 group-hover:text-latte-900 group-hover:-translate-x-1 group-hover:-translate-y-1 transition duration-200"></i>
+                        </div>
+                        <h3 class="font-en text-xl font-bold text-latte-900 mb-2 group-hover:text-latte-600 transition">Elite Medical Complex</h3>
+                        <p class="text-latte-700 text-sm font-medium mb-5">
+                            مجمع إيليت الطبي التخصصي بدمنهور - واجهة تفاعلية تشمل 18 تخصصاً وحجز فوري
+                        </p>
+                        <div class="flex items-center gap-2 text-[11px] font-mono text-latte-500 pt-4 border-t border-latte-100">
+                            <span>Tailwind CSS</span> • <span>Interactive UI</span> • <span>Bilingual</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project 3: Nova -->
+                <a href="https://mahmoudabokhashmmm-svg.github.io/Nova/" target="_blank" rel="noopener noreferrer" class="group rounded-2xl bg-white border border-latte-200 hover:border-latte-400 hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between overflow-hidden">
+                    <div class="h-48 bg-stone-900 relative overflow-hidden flex items-center justify-center p-3">
+                        <img src="nova.webp" alt="Nova Louis Vuitton Bag" class="w-full h-full object-contain group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-xs text-[11px] font-mono text-latte-800 px-2.5 py-1 rounded-md border border-latte-200 shadow-xs">Live Demo</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs font-semibold text-latte-700 bg-latte-100 px-3 py-1 rounded-md border border-latte-200">Luxury Store</span>
+                            <i class="fa-solid fa-arrow-up-left text-latte-400 group-hover:text-latte-900 group-hover:-translate-x-1 group-hover:-translate-y-1 transition duration-200"></i>
+                        </div>
+                        <h3 class="font-en text-xl font-bold text-latte-900 mb-2 group-hover:text-latte-600 transition">Nova</h3>
+                        <p class="text-latte-700 text-sm font-medium mb-5">
+                            متجر حقائب عصرية فاخرة بتجربة تسوق سريعة وتصميم مخصص
+                        </p>
+                        <div class="flex items-center gap-2 text-[11px] font-mono text-latte-500 pt-4 border-t border-latte-100">
+                            <span>E-Commerce</span> • <span>Modern UI</span> • <span>CSS Grid</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project 4: AURA -->
+                <a href="https://mahmoudabokhashmmm-svg.github.io/AURA/" target="_blank" rel="noopener noreferrer" class="group rounded-2xl bg-white border border-latte-200 hover:border-latte-400 hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between overflow-hidden">
+                    <div class="h-48 bg-latte-100/60 relative overflow-hidden flex items-center justify-center p-3">
+                        <img src="watch.webp" alt="AURA Classic Luxury Watch" class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-xs text-[11px] font-mono text-latte-800 px-2.5 py-1 rounded-md border border-latte-200 shadow-xs">Live Demo</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs font-semibold text-latte-700 bg-latte-100 px-3 py-1 rounded-md border border-latte-200">Luxury Store</span>
+                            <i class="fa-solid fa-arrow-up-left text-latte-400 group-hover:text-latte-900 group-hover:-translate-x-1 group-hover:-translate-y-1 transition duration-200"></i>
+                        </div>
+                        <h3 class="font-en text-xl font-bold text-latte-900 mb-2 group-hover:text-latte-600 transition">AURA</h3>
+                        <p class="text-latte-700 text-sm font-medium mb-5">
+                            متجر ساعات راقية يركز على بساطة العرض ودقة تفاصيل المنتجات
+                        </p>
+                        <div class="flex items-center gap-2 text-[11px] font-mono text-latte-500 pt-4 border-t border-latte-100">
+                            <span>E-Commerce</span> • <span>Minimalist</span> • <span>Typography</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About & Skills -->
+    <section id="about" class="py-20 border-t border-latte-200/80">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-10 items-start">
+                <div>
+                    <h2 class="text-xl font-bold text-latte-900 mb-2">نبذة عني</h2>
+                    <p class="text-latte-600 text-xs sm:text-sm leading-relaxed">
+                        مطور واجهات أمامية أهتم ببناء واجهات تجمع بين السرعة الفائقة والراحة البصرية، مع التركيز على كود نظيف وهيكلة تضمن تجربة مستخدم سلسة واستجابة تامة لكافة الشاشات.
+                    </p>
+                </div>
+
+                <div class="md:col-span-2">
+                    <h3 class="text-xs uppercase text-latte-700 tracking-wider font-bold mb-3">المهارات والتقنيات</h3>
+                    <div class="flex flex-wrap gap-2.5">
+                        <span class="px-3.5 py-2 rounded-xl bg-white border border-latte-200 text-latte-800 text-xs font-semibold shadow-2xs flex items-center gap-2">
+                            <i class="fa-brands fa-html5 text-orange-600"></i> HTML5
+                        </span>
+                        <span class="px-3.5 py-2 rounded-xl bg-white border border-latte-200 text-latte-800 text-xs font-semibold shadow-2xs flex items-center gap-2">
+                            <i class="fa-brands fa-css3-alt text-blue-600"></i> CSS3 / Tailwind
+                        </span>
+                        <span class="px-3.5 py-2 rounded-xl bg-white border border-latte-200 text-latte-800 text-xs font-semibold shadow-2xs flex items-center gap-2">
+                            <i class="fa-brands fa-js text-amber-500"></i> JavaScript
+                        </span>
+                        <span class="px-3.5 py-2 rounded-xl bg-white border border-latte-200 text-latte-800 text-xs font-semibold shadow-2xs flex items-center gap-2">
+                            <i class="fa-solid fa-mobile-screen-button text-latte-600"></i> Responsive Design
+                        </span>
+                        <span class="px-3.5 py-2 rounded-xl bg-white border border-latte-200 text-latte-800 text-xs font-semibold shadow-2xs flex items-center gap-2">
+                            <i class="fa-brands fa-git-alt text-red-500"></i> Git & GitHub
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 border-t border-latte-200/80 bg-latte-100/60">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div class="p-8 sm:p-12 rounded-3xl bg-white border border-latte-200 shadow-sm max-w-2xl mx-auto">
+                <h2 class="text-2xl sm:text-3xl font-bold text-latte-900 mb-2">هل لديك مشروع جديد؟</h2>
+                <p class="text-latte-600 text-xs sm:text-sm mb-8">تواصل معي مباشرة لمناقشة فكرتك وتحويلها إلى واقع بأعلى جودة.</p>
+
+                <!-- أزرار التواصل -->
+                <div class="flex flex-wrap items-center justify-center gap-3 mb-8">
+                    <a href="https://wa.me/201005823798" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-xl bg-latte-50 border border-latte-200 hover:border-latte-400 text-latte-900 text-xs font-semibold flex items-center gap-2 transition hover:-translate-y-0.5">
+                        <i class="fa-brands fa-whatsapp text-emerald-600 text-sm"></i> 01005823798
+                    </a>
+                    <a href="mailto:mahmoudabokhashmm@gmail.com" class="px-4 py-2.5 rounded-xl bg-latte-50 border border-latte-200 hover:border-latte-400 text-latte-900 text-xs font-semibold flex items-center gap-2 transition hover:-translate-y-0.5">
+                        <i class="fa-solid fa-envelope text-latte-600 text-sm"></i> البريد الإلكتروني
+                    </a>
+                    <a href="tel:+201005823798" class="px-4 py-2.5 rounded-xl bg-latte-50 border border-latte-200 hover:border-latte-400 text-latte-900 text-xs font-semibold flex items-center gap-2 transition hover:-translate-y-0.5">
+                        <i class="fa-solid fa-phone text-latte-600 text-sm"></i> اتصال هاتفي
+                    </a>
+                </div>
+
+                <!-- حسابات التواصل -->
+                <div class="flex items-center justify-center gap-3 text-latte-600">
+                    <a href="https://github.com/mahmoudabokhashmmm-svg" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-latte-50 border border-latte-200 hover:border-latte-400 hover:text-latte-900 flex items-center justify-center transition hover:-translate-y-0.5" title="GitHub"><i class="fa-brands fa-github text-sm"></i></a>
+                    <a href="https://www.facebook.com/abukhashm" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-latte-50 border border-latte-200 hover:border-latte-400 hover:text-latte-900 flex items-center justify-center transition hover:-translate-y-0.5" title="Facebook"><i class="fa-brands fa-facebook-f text-sm"></i></a>
+                    <a href="https://www.instagram.com/_abo_khashm_?igsi=Z3BjNG1ld2J6MjRv" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-latte-50 border border-latte-200 hover:border-latte-400 hover:text-latte-900 flex items-center justify-center transition hover:-translate-y-0.5" title="Instagram"><i class="fa-brands fa-instagram text-sm"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-7 border-t border-latte-200 text-center text-latte-500 text-xs">
+        <p>© 2026 Mahmoud Nasser • All rights reserved</p>
+    </footer>
+
+</body>
+</html>
+
